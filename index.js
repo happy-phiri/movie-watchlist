@@ -6,7 +6,7 @@ const handleSearch = (e) => {
   e.preventDefault();
   const movieSearch = searchInput.value;
 
-  fetch(`http://www.omdbapi.com/?apikey=92a428f9&s=${movieSearch}`)
+  fetch(`https://www.omdbapi.com/?apikey=92a428f9&s=${movieSearch}`)
     .then((res) => res.json())
     .then((data) => {
       for (const movie of data.Search) {
