@@ -1,0 +1,220 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0e0e0e;
+}
+
+body, input, input::placeholder, .btn {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 2.67rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.container {
+    width: 65%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    padding: 7em 0;
+    background-image: url(/images/poster2.jpg), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-text h1 {
+    color: #ffffff;
+    margin: 0;
+}
+
+.header-text a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.5em;
+}
+
+form {
+    padding-bottom: 1.5em;
+}
+
+input[type="text"] {
+    border-radius: 5px 0 0 5px;
+    background-color: #4b4b4b;
+    border: none;
+    color: #ffffff;
+    width: 87.5%;
+    height: 43px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+input[type="text"]::placeholder {
+    color: #ffffff;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #a5a5a5;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    height: 43px;
+    width: 12.5%;
+    margin-left: -6px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+    opacity: 0.9;
+}
+
+.icon {
+    background-image: url(/images/icons8-search-30.png);
+    background-position: left 10px top 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-left: 40px;
+}
+
+/* MOVIE CARDS */
+.results-container {
+    padding: 5em 0;
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    width: 300px;
+    color: #ffffff;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    transition: .5s ease;
+}
+
+.poster {
+    border-radius: 20px 20px 0 0;
+}
+
+.movie-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+.movie-overlay .btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.movie-poster:hover .poster {
+    opacity: 0.3;
+}
+
+.movie-poster:hover .movie-overlay {
+    opacity: 1;
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 45%;
+}
+
+.btn .fa-solid {
+    background-color: #0e0e0e;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card h2 {
+    font-weight: 400;
+    margin: 0.5rem 0;
+}
+
+.movie-subs p {
+    font-size: 0.75rem;
+    line-height: 0.8;
+    font-style: italic;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 75%;
+    }
+    header {
+        padding: 4em 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+    input[type="text"] {
+        width: 77.5%;
+    }
+
+    input[type="submit"] {
+        width: 22.5%;
+    }
+}
